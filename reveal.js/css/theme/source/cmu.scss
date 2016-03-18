@@ -1,0 +1,65 @@
+/**
+ * CMU design spec color theme for reveal.js presentations.
+ * Devon Walker (devonw)
+ *
+ * Design spec:
+ * http://www.cmu.edu/marcom/brand-guidelines/print-web-products/web/index.html
+ *
+ * Base code from settings.scss in reveal.js Github project.
+ * https://github.com/hakimel/reveal.js
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Base settings to override -------------------
+// Background of the presentation
+$backgroundColor: #fff;
+
+// Primary/body text
+$mainFont: Verdana, Arial, Helvetica, sans-serif;
+$mainFontSize: 24px;
+$mainColor: #000;
+
+// Vertical spacing between blocks of text
+$blockMargin: 15px;
+
+// Headings
+$headingMargin: 0 0 $blockMargin 0;
+$headingFont: Verdana, Arial, Helvetica, sans-serif;
+$headingColor: #000;
+$headingLineHeight: 1.2;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingTextShadow: none;
+$headingFontWeight: normal;
+$heading1TextShadow: $headingTextShadow;
+
+$heading1Size: 2.25em;
+$heading2Size: 2.0em;
+$heading3Size: 1.5em;
+$heading4Size: 1.5em;
+
+// Links and actions
+$linkColor: #990000;
+$linkColorHover: lighten( $linkColor, 20% );
+
+// Text selection
+$selectionBackgroundColor: #7493a2;
+$selectionColor: #fff;
+
+// Generates the presentation background, can be overridden
+// to return a background image or gradient
+@mixin bodyBackground() {
+	background: $backgroundColor;
+}
+// ---------------------------------------------
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
